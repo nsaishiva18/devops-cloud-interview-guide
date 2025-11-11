@@ -8,6 +8,24 @@ This question evaluates your knowledge of secure SSH access, key-based authentic
 No, you **cannot restore** a lost PEM file — it’s not stored on AWS or recoverable.  
 However, you can **regain access** by using a workaround: create a new key pair, attach it to the instance via a temporary EC2 rescue process, and restore SSH access.
 
+```
+- We can try by AWS session manager or cloud instance connect i,e. EC2 instance connect.
+
+- Through ssh-keygen generate public and private keys, download private key to local and provide right permissions like chmod 400.
+
+```
+# Lab Tasks
+
+```sh
+# Select EC2 Instance connect --> we will get access to the instance terminal.
+
+ssh-keygen -t rsa
+cd ~ /.ssh
+ls -ltr # will have id_rsa and id_rsa.pub 
+vim authorized_keys # copy to id_rsa.pub to authorized_keys and download id_rsa(Private key) to local
+
+```
+
 ### 📘 Detailed Explanation  
 
 PEM files (private keys) are **never retrievable from AWS** after initial creation. Losing the PEM file means you cannot SSH into the EC2 instance using the existing key pair.

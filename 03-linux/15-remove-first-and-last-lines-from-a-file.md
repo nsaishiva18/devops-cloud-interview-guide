@@ -9,7 +9,8 @@ This task checks your understanding of line-addressing in `sed`, which is a powe
 ### 🖥️ Command:
 
 ```bash
-sed '1d; $d' filename.txt
+sed '1d; $d' filename.txt # This will print the oupput.
+sed -i '1d $d' filename.txt # This will edit the file in place.
 ```
 
 ---

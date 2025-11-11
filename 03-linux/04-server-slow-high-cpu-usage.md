@@ -7,6 +7,13 @@ This question assesses your ability to diagnose performance issues, identify roo
 ## ✅ Answer  
 I would begin by identifying which processes are consuming the most CPU using tools like `top`, `htop`, or `pidstat`, then analyze whether it's due to a misbehaving application, runaway process, or scheduled job. Based on the findings, I’d take corrective action — either by killing the process, adjusting resource limits, or scaling the workload.
 
+```sh
+# Find out if any process is running with more CPU and try to kill if that is not imp if imp then decrease the priority.
+
+nice or renice pid 
+
+```
+
 ### 📘 Detailed Explanation  
 
 ---

@@ -8,7 +8,10 @@ This question tests your comfort with Linux file management and log housekeeping
 You can use the `find` command with the `-mtime` option to locate files older than 7 days:
 
 ```bash
-find /var/log -type f -mtime +7
+find /var/log -type f -mtime +7 # f here is file
+find /var/log -type d -mtime +7 # d here is directory
+
+find /var/log -type f *.log -mtime +7 # older then 7 days.
 ```
 
 ### 📘 Detailed Explanation  

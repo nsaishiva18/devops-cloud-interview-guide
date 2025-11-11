@@ -37,3 +37,16 @@ find "$LOG_DIR" -type f -name "*.log" -mtime +30 -exec rm -f {} \; -exec echo "[
 echo "[$(date)] Log rotation completed successfully." >> "$LOG_FILE"
 
 ```
+
+
+### 🗓️ Setting Up Cron Job
+1. Open the cron table for editing:
+
+```bash
+   crontab -e
+```
+2. Add the following line to run the script daily at 11:30` PM:
+```bash
+   30 23 * * * /path/to/log_cleanup.sh
+```
+

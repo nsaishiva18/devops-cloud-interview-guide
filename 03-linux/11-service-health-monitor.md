@@ -9,11 +9,28 @@ You are asked to monitor multiple services like `nginx`, `sshd`, and `docker`.
 ### 📝 Short Explanation  
 This tests your ability to write robust service monitoring automation for multiple services, which is a common expectation in DevOps and SRE roles.
 
+## Sample Input and Output for extracting
+
+```sh
+services=("nginx" "sshd" "docker")
+for i in ${services[@]}; do echo $i; done
+```
+
+
+
 ## ✅ Answer  
 
-### 🖥️ Shell Script: `multi_service_monitor.sh`
+```sh
+#!/bin/bash
 
-```bash
+# List of services to monitor
+services=("nginx" "sshd" "docker")
+
+# Report Header
+echo "-----------------------------------"
+echo "  Service Health Check Report"
+echo "-----------------------------------"
+
 #!/bin/bash
 
 # List of services to monitor

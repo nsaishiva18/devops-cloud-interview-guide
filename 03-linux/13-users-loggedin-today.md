@@ -8,6 +8,11 @@ This tests your understanding of Linux log inspection and user activity tracking
 
 ### 🖥️ Command
 
+```sh
+last -F # This will show all users who logged in.
+last -F| grep "$(date '+%b %e')"
+```
+
 ```bash
 last | grep "$(date '+%a %b %e')" | awk '{print $1}' | sort | uniq
 ```

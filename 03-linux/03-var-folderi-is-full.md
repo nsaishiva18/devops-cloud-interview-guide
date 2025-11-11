@@ -14,6 +14,7 @@ My first step is to identify what’s consuming the space inside `/var`. Then I 
 ### ✅ Step 1: Inspect Disk Usage Under `/var`
 
 ```bash
+sudo du -sh *
 sudo du -sh /var/* | sort -hr | head -10
 ```
 This will show which directories inside `/var` are consuming the most space — usually it’s `/var/log`, `/var/cache`, or `/var/lib/docker`.

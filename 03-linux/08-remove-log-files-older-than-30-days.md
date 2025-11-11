@@ -28,7 +28,7 @@ sudo find /path/to/folder -type f -name "*.log" -mtime +30 -exec rm -f {} \;
 
 #### ✅ Example:
 ```bash
-sudo find /var/log -type f -name "*.log" -mtime +30 -exec rm -f {} \;
+sudo find /var/log -type f -name "*.log" -mtime +30 -exec rm -f {} \;ī
 ```
 
 This command will delete all `.log` files in `/var/log` older than 30 days.

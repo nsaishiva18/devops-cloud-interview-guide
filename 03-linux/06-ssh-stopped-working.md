@@ -104,6 +104,9 @@ If all else fails:
 - `/etc/ssh/sshd_config` edited incorrectly
 
 > Summary:  
+> Check if user is trying to access with right ip address or hostname 
+> Check if pem file permissions are too open like 700 or 777
+> Check if firewall is disabled.
 > Identify error → check network reachability → inspect key/user mismatch → use EC2 Connect if possible → rescue via EBS if needed.
 
 ---
