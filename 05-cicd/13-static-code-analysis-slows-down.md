@@ -4,7 +4,7 @@ Static Code Analysis Slows Down CI Pipeline — How Will You Fix It?
 ### 📝 Short Explanation  
 When static code analysis becomes a bottleneck in the CI pipeline, the key is to **optimize its execution** by limiting scope, parallelizing checks, or moving analysis to asynchronous or pre-merge steps.
 
-## ✅ Answer  
+## ✅ Answer
 
 If static analysis is slowing down the pipeline, I take the following steps to improve performance **without sacrificing code quality**.
 
@@ -13,6 +13,7 @@ If static analysis is slowing down the pipeline, I take the following steps to i
 ### 🧭 Step-by-Step Optimization Strategy
 
 #### 1. 🔄 **Run Analysis Only on Changed Files**
+
 Instead of scanning the whole codebase, restrict analysis to recently modified files:
 ```bash
 git diff --name-only origin/main...HEAD | grep '\.py$' | xargs pylint
@@ -23,6 +24,7 @@ git diff --name-only origin/main...HEAD | grep '\.py$' | xargs pylint
 ---
 
 #### 2. 🧵 **Run Analysis in Parallel**
+
 Use tools or flags that support multi-threaded/static checks:
 ```bash
 flake8 --jobs=4
@@ -39,6 +41,7 @@ strategy:
 ---
 
 #### 3. 🕒 **Shift Left: Run Analysis Pre-CI**
+
 Enforce basic static checks via pre-commit hooks so developers catch issues before pushing:
 ```bash
 pre-commit install
@@ -49,6 +52,7 @@ pre-commit install
 ---
 
 #### 4. 🧪 **Run Heavy Checks on a Schedule**
+
 - Keep quick linting in PR builds.
 - Offload deeper security scans (e.g., `bandit`, `semgrep`) to scheduled workflows (daily or nightly).
 
@@ -61,6 +65,7 @@ on:
 ---
 
 #### 5. 🎯 **Tune Rules and Severity**
+
 - Avoid enabling all rules by default.
 - Focus on **high-impact rules** (security, correctness) in CI.
 - Move **style-based** checks to a lower-priority job or local checks.
@@ -68,7 +73,9 @@ on:
 ---
 
 #### 6. 📦 **Cache Tool Dependencies**
+
 - Caching virtualenvs, node_modules, or pip wheels prevents repeated installations:
+
 ```yaml
 - uses: actions/cache@v3
   with:
@@ -83,6 +90,7 @@ on:
 In one repo, `pylint` checks across the monorepo were taking 4–5 minutes per build.
 
 ✅ Fixes applied:
+
 - Limited to `git diff` changes
 - Split frontend/backend linters into separate jobs
 - Added pre-commit hooks for basic checks
@@ -93,6 +101,7 @@ In one repo, `pylint` checks across the monorepo were taking 4–5 minutes per b
 
 > Summary:  
 > When static analysis slows down the pipeline:
+
 > - Run checks only on changed files  
 > - Use parallel jobs  
 > - Offload heavy scans to scheduled builds  

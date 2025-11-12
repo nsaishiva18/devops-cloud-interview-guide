@@ -82,3 +82,10 @@ Root cause: A DevOps engineer had manually increased replica count on the Deploy
 > Manual changes, runtime drift, or auto-generated mutations can cause this, and can be fixed with sync or exclusions.
 
 ---
+
+```sh
+argocd app sync <app-name>
+argocd app diff <app-name>
+ 
+```
+

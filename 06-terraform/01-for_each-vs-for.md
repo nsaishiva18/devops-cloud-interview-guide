@@ -66,8 +66,12 @@ This produces a map:
 
 Key takeaways
 
-    for_each → use when you need Terraform to create N physical resources.
+`for_each` → use when you need Terraform to create N physical resources.
 
-    for → use when you need a derived list or map for arguments or outputs.
+- It is used to create multiple resources bases on map or set input.(Controls resource execution)
+
+`for` → use when you need a derived list or map for arguments or outputs.
+
+- It is used to transform or generate values for map or list types.(Data Transformation)
 
     They complement each other: you might build a map with for, then pass it to for_each for scalable resource creation.

@@ -138,3 +138,19 @@ Useful for debugging network, mount paths, environment variables, etc.
 ### Key takeaway
 
 > "Mastering core Docker commands like `build`, `run`, `exec`, and `logs` makes daily container work efficient and helps troubleshoot quickly."
+
+
+```
+docker build - used to build docker image from docker file.
+
+docker run - once the image is build, run is used to run the container.
+
+docker ps  -
+
+docker images -
+docker logs  -
+docker rmi - 
+
+
+
+```

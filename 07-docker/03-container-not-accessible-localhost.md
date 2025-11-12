@@ -69,3 +69,13 @@ docker exec -it <container> netstat -tulnp
 ### Key takeaway
 
 > "Publishing ports with Docker is only part of the setup. The application inside the container must listen on `0.0.0.0` for external traffic to reach it."
+
+1. If the user might have used wrong port while running the docker run command.
+
+2. I will check if the port is free or not. By using `netstat -tuln | grep <port_number>` or `lsof -i:<port_number>`.
+
+3. If we have any firewall setttings which is blocking the port.(If ubuntu then will check ufw command `sudo ufw status` if firewall is active or not) - If active disable the firewall using `sudo ufw disable`
+
+4. Will check what is the application and in which language it is written and will check the configuration of the application that on which host it is listening. If it is listening on localhost or 127.0.0.1, it won't be accessible from outside the container. Will ask developer to change the host to `0.0.0.0`.
+
+5. Will check docker logs, inspect.

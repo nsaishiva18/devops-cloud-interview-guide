@@ -96,3 +96,12 @@ This tests your ability to troubleshoot performance issues across the **full sta
 > App slowness can come from **frontend, backend, DB, infrastructure, or network**. Use a systematic layer-by-layer approach to isolate and fix the issue. Focus first on scope, then verify each component with logs, metrics, and tools.
 
 ---
+
+### netstat command:
+
+```
+To check network connections and statistics, you can use the `netstat` command. Here are some common usages:
+- `netstat -tuln`: Lists all listening ports and their associated services.
+- `netstat -s`: Displays network statistics, which can help identify issues like packet loss or errors.
+
+```

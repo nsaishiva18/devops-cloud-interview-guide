@@ -6,6 +6,12 @@ Jenkins Shared Libraries allow you to **centralize reusable pipeline code** (lik
 
 ## ✅ Answer  
 
+Below are common for 
+- Static code analysis
+- Build Stage is same as we mostly have java applications
+- Deployment logic is same
+
+
 ---
 
 ### 📘 What is a Jenkins Shared Library?

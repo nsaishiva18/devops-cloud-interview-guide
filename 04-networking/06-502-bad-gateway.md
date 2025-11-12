@@ -5,6 +5,7 @@ Your website is returning a **502 Bad Gateway** HTTP status code.
 Explain what this status code means and list possible root causes and how you'd resolve them.
 
 ### 📝 Short Explanation  
+
 A **502 Bad Gateway** error means that a **gateway or proxy server** (like NGINX, HAProxy, or AWS ELB) got an invalid response from the upstream server (like an app server or container).
 
 ## ✅ Answer  

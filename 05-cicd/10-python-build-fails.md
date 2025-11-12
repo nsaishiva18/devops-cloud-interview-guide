@@ -87,9 +87,12 @@ Reason: The app used `python-dotenv`, but `.env` file was not available in CI, a
 
 > Summary:  
 > When a Python build fails in CI but works locally,
+
+> - Will check logs of the CI -- Timeout, lack of resources.
 > - Check version differences  
-> - Validate dependency installation  
-> - Ensure all required files and env vars are available  
+> - Validate dependency installation(If developer is using virtual env or not)
+> - Ensure all required files and env vars are available
 > - Review system-level dependencies and module paths
+> - Caching issues - when developer is running locally, build command is picking earlier version from artifact.
 
 ---

@@ -96,3 +96,11 @@ These issues were caught **before** they were deployed to staging, saving time a
 > Static code analysis helps identify bugs, security risks, code smells, and style issues early in the development cycle. It boosts code quality, maintainability, and security without running the application.
 
 ---
+
+- syntax errors
+- unused variables
+- style violations(indentation, naming conventions)
+- Type mismatches
+- code complexity(too many nested loops, long methods)
+- some security issues.
+

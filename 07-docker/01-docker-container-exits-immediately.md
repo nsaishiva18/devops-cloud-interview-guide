@@ -61,3 +61,8 @@ A non-zero exit code often indicates an error.
 ### Key takeaway
 
 > "A Docker container must run a long-running foreground process. If it finishes or crashes, the container exits. Use `docker logs`, `-it` mode, and inspect `CMD/ENTRYPOINT` to debug such issues effectively."
+
+```
+Docker containers are meant to be a single process containers.
+- If the command or process specified in the container completes quickly, or may be if it falls immediately due to an error, or if it is not a long-running process, the container will exit immediately.
+```

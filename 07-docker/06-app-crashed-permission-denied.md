@@ -37,6 +37,25 @@ It will throw:
 Permission denied
 ```
 
+Sample dockerfile snippet:
+```
+FROM python:3.10
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+CPOY . .
+
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+
+USER appuser
+
+CMD ["python", "app.py"]
+
+```
+
 #### ✅ Fix
 
 Set executable permission inside Dockerfile:

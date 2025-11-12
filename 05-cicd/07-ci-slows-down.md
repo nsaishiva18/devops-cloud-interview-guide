@@ -64,10 +64,12 @@ When I notice that builds are getting slower over time, I take a **metrics-drive
 
 We noticed our build time increased from 7 to 19 minutes over 6 months.  
 Root cause:  
+
 - Increased number of tests without parallel execution  
 - Outdated Docker layers not using cache  
 
 ✅ Fixes implemented:
+
 - Introduced parallel test stages  
 - Refactored Dockerfile to leverage cache better  
 - Cleaned up unused images on runners weekly  
@@ -76,6 +78,7 @@ Root cause:
 
 > Summary:  
 > When a pipeline slows down, I:
+
 > - Measure and isolate the slowdown  
 > - Optimize dependencies and builds  
 > - Use caching and parallelism  

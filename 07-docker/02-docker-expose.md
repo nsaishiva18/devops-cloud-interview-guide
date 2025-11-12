@@ -47,12 +47,22 @@ docker run -p 8080:80 mynginx
 
 ---
 
+- In docker compose where one service is talking to another service such as backend is talking to db service - because of the expose instruction from the docker file.
+
+
 ### 🧠 Real-world Insight
 
 > “We used EXPOSE in all our base images so that developers and Docker Compose could understand the default ports our microservices used — even though we always mapped them explicitly with `ports:` in Compose.”
 
 ---
 
+
 ### Key takeaway
 
 > "`EXPOSE` is a form of **documentation** inside the image to signal expected ports — it doesn't open ports on its own."
+
+- It is more of metadata where it will help other people who are working on the Dockerfile understand on which port the app is running on.
+
+- It does not actually publish or open the port to the outside world.(In command this will be done by -p or --publish flag)
+
+

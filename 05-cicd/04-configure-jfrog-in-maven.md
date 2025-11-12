@@ -11,6 +11,13 @@ We configure Maven to work with Artifactory by:
 1. **Defining credentials** in `settings.xml`.
 2. **Referencing the Artifactory repository** in `pom.xml`.
 
+- setting.xml consists of `profile` and `repository` details, `PluginRepositories`.
+
+- I update this in settings.xml 
+
+- For application-specific configuration, I modify `distributionManagement` in pom.xml.
+
+
 ---
 
 ### ⚙️ Step 1: Update `settings.xml`

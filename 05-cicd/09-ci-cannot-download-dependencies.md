@@ -79,7 +79,9 @@ We once faced this with `mvn install` failing in Jenkins.
 Reason: The **CodeArtifact token had expired**, but Jenkins was still using the old token via environment variable.
 
 ✅ Fix:  
+
 - Added a step in Jenkinsfile to refresh the token before the build:
+
 ```bash
 aws codeartifact get-authorization-token ...
 ```
@@ -88,6 +90,7 @@ aws codeartifact get-authorization-token ...
 
 > Summary:  
 > When a build fails due to missing dependencies, I:
+
 > - Check error logs and repo URL
 > - Validate credentials and token freshness
 > - Confirm repo and artifact existence

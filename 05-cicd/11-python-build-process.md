@@ -94,3 +94,25 @@ For a Flask-based API project:
 > The Python build process involves organizing code, managing dependencies, building wheels/sdists, and optionally publishing to PyPI or packaging into Docker images. Even though Python is interpreted, structured builds help automate testing and deployment at scale.
 
 ---
+
+### 🛠️ Python Build Process Commands
+
+1. pyproject.toml - Within this file will provide required information and metadata of the project.
+
+2. inatall build package - `pip3 install build`. This command will install the build package which is used to create the build artifacts for the project.
+
+3. `python3 -m build` - This command will create the build artifacts in the dist/ directory (such as .whl and .tar.gz files(artifacts)will be present.) 
+
+4. `pip install twine` - This command will install the twine package which is used to upload the build artifacts to PyPI repository.
+
+5. `twine upload dist/*` - This command will upload the build artifacts to PyPI repository. 
+
+### 🛠️ Maven Build Process
+
+1. pom.xml - This file contains the project configuration details and dependencies required for the project.
+
+2. mvn clean install - This command will clean the previous build artifacts and install the dependencies specified in the pom.xml file.
+
+3. mvn package - This command will create the build artifacts in the target/ directory (such as .jar or .war files(artifacts)will be present.)
+
+4. mvn deploy - This command will deploy the build artifacts to a remote repository or server.

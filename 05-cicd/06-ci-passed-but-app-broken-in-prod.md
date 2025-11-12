@@ -72,3 +72,7 @@ After a successful CI build and deployment, the app was broken in prod because a
 > A CI pipeline success doesn’t always guarantee production stability. I validate logs, environment parity, secrets, and roll back if needed. Going forward, I strengthen post-deploy checks and staging fidelity.
 
 ---
+
+
+- Traffic flow for prod and stage may vary.
+- Will check logs --> Crashloop backoff.

@@ -65,9 +65,12 @@ error: package javax.annotation does not exist
 
 > Summary:  
 > When a build passes locally but fails in CI, I:
+
 > - Start with CI logs,
+> - Will check if developer is using `mvn clean` before `mvn install` or `mvn package` to ensure no stale artifacts,
 > - Reproduce the issue in a clean container,
-> - Compare environments,
+> - Compare environments (Will compare with developer local environment and CI)
+> - Missing file permissions,
 > - Check for missing dependencies or secrets,
 > - Fix and make the build reproducible and environment-agnostic.
 

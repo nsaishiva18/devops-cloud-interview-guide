@@ -8,7 +8,9 @@ This question evaluates your understanding of how Docker containers are initiali
 
 ### Answer  
 Both `CMD` and `ENTRYPOINT` define what runs when a container starts, but:
-- `ENTRYPOINT` is fixed and always executed.
+
+- `ENTRYPOINT` is fixed and always executed. Can not override the default arguments.
+
 - `CMD` provides default arguments that can be overridden.
 
 When combined, `CMD` acts as arguments to the `ENTRYPOINT`.
@@ -113,3 +115,14 @@ So final command = `echo Hello from CMD`
 ### Key takeaway
 
 > "Use ENTRYPOINT to define the main command, and CMD to define default arguments. This gives flexibility to override while keeping a consistent entry behavior."
+
+- When it comes to `ENTRYPOINT` and `CMD`. When we run the container, these are the first commands to get executed.
+
+- Where as when it comes to CMD - you can override the default parameters by passing argument to the docker run command.
+
+- Where as with ENTRYPOINT you can not do it.
+
+Q. Can you override through ENTRYPOINT as well ?
+
+A. Yes, in Docker run command we need to pass --entrypoint.
+

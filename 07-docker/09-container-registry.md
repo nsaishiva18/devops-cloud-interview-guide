@@ -65,3 +65,13 @@ docker push <repo-url>:latest
 ### Key takeaway
 
 > "Choosing the right container registry depends on your cloud provider, CI/CD integration needs, and security policies. ECR works best for AWS-centric workflows."
+
+- DockerHub is less preferred option because of rate limiting issues. 
+- Even the private Docker Hub account is also less preferred because of performance issues compared to cloud provider registries.
+
+- These days, companies go for ECR, ACR, or GCR based on their cloud provider preference. 
+
+- quay.io, GHCR.io (GitHub Container Registry)
+
+
+

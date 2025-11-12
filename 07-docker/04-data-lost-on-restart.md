@@ -28,6 +28,9 @@ This way, data written to `/app/data` will persist even if the container stops o
 
 ---
 
+**Note:-** We can also use bind mounts, but volumes are more preferable.
+
+
 ### 🧷 2. **Bind Mounts**
 
 Mount a host directory directly into the container:

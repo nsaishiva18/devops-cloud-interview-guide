@@ -39,6 +39,13 @@ Here’s how it works when you type a URL like `https://example.com` and hit Ent
 
 ---
 
+```
+Layer7(http,https,FTP), Layer6(SSL/TLS), Layer5(Session established) are taken care by web browser.
+
+```
+
+---
+
 #### 4. **Transport Layer (Layer 4)**  
 - Breaks data into **segments** and ensures **reliable delivery**.
 - Adds source and destination **port numbers**.
@@ -98,3 +105,4 @@ Here’s how it works when you type a URL like `https://example.com` and hit Ent
 > The OSI model helps us understand how data flows across a network. It breaks the process into layers so we can troubleshoot and build systems more effectively. Each layer wraps or unwraps data, guiding it from your browser to a server — and back.
 
 ---
+

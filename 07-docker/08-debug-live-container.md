@@ -118,3 +118,12 @@ This connects your terminal to the container’s primary process. You can view r
 ### Key takeaway
 
 > "To debug a live container, use `exec` for shell access, `logs` for output, `inspect` for config, and `top` for processes — all without downtime."
+
+- As it is already live container we can not use 
+
+`docker run -it` - this is used to run the container interactively from scratch.
+
+`docker run -d` - runs container in background.
+
+- So we need to use `docker exec -it <container-id> /bin/bash` or `sh` to get inside the running container.
+
